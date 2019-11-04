@@ -65,7 +65,7 @@ while 1 == 1:
                 print(result)
                 sys.stdin.read()              
     elif command == "2":
-        filepath = 'ALL_PATTERNS.txt'
+        filepath = 'SOME_PATTERNS.txt'
         lineNr = subprocess.run(['wc', '-l',filepath], stdout=subprocess.PIPE).stdout.decode('utf-8').split(' ', 1)[0]
         with open(filepath) as fp:  
             for cnt, line in enumerate(fp):
