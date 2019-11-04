@@ -17,11 +17,11 @@ Included are two different Python scripts:
 The file "hooking-vold.py" replaces "footer_put" in Vold.
 The file "hooking-mount.py" creates the RPC we use from the python script to try the different codes.
 
-We need to run the files at the same time, in two different terminals.
+We need to run files at the same time, in two different terminals.
 
 How to use it:
 
-1. Run "startFrida.sh" to upload and start frida server on your connected device.
+1. Run "startFrida.sh" to upload and start FRiDA server on your connected device.
 2. Run "python3 hooking-vold.py" in a separate terminal.
 3. Run "python3 hooking-mount.py" in main terminal.
 4. Sometimes when the correct code is found, the process hangs the device. Just issue "adb reboot" to restart secure startup and then enter the correct code.
