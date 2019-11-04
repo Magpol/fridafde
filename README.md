@@ -2,6 +2,8 @@
 
 Here's a small write-up on How-To use FRiDA to bruteforce Secure Startup with FDE-encryption on a Samsung G935F running Android 8.
 
+![ExampleImage](/fde_example.png?raw=true "Title")
+
 FRiDA requires a rooted device ( or FRiDA injected into a specifik process ). I won't go into details on how-to accomplish this, just google ENG-ROOT or Magisk and you will probably
 find a rooting solution that works for you. I've also included a small script to upload and start FRiDA on the connected device: startFrida.sh
 
