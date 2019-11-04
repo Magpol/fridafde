@@ -7,7 +7,7 @@ Here's a small write-up on how to use FRiDA to bruteforce Secure Startup with FD
 FRiDA requires a rooted device (or FRiDA injected into a specific process). I won't go into details on how to accomplish this, just google ENG-ROOT or Magisk and you will probably
 find a rooting solution that works for you. I've also included a small script to upload and start FRiDA on the connected device: startFrida.sh.
 
-First of all, what are we doing? And why are we doing this? What i wanted to do is find a way of testing codes without hitting the limit of maximum password attempts. If the maximum attempt value is reached, the device will reboot and wipe. So my first step was to find out the processes or functions that managed all this.
+First of all, what are we doing? And why are we doing this? What I wanted to do is find a way of testing codes without hitting the limit of maximum password attempts. If the maximum attempt value is reached, the device will reboot and wipe. So my first step was to find out the processes or functions that managed all this.
 
 From reading Android source and using Objection (another great tool) I soon figured out that  "android.os.storage.IStorageManager::decryptStorage" running in the process "com.android.settings:CryptKeeper" was the target for my FRiDA-script. I also knew from before that Vold is involved in the process of verifying and updating the crypto footer.
 After some fiddling with Radare2 and FRiDA, I came to the conclusion that by replacing the "footer_put" function in Vold I could try codes and keep the counter at the original value.
